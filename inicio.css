@@ -1,0 +1,110 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1a252f;
+    line-height: 1.7;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1600');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ===== TITULOS ===== */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ff6b6b;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* ===== TEXTO ===== */
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1rem;
+    text-align: justify;
+
+    background: rgba(255,255,255,0.95); /* semi transparente */
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== IMAGENES ===== */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: #1a252f;
+    color: black;
+    border-radius: 10px;
+}
+
+/* ===== EFECTO HERO SIMPLE ===== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #ff6b6b, #f39c12);
+    z-index: -1;
+    opacity: 0.08;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        padding: 15px;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+    }
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    opacity: 0.08;
+
+    z-index: -1;
+}

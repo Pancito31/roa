@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menú completo de elMiraBurger: hamburguesas, combos, bebidas y más. Precios irresistibles.">
+    <title>Menú | elMiraBurger - Las mejores hamburguesas</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="menu-header">
+        <div class="header-content">
+            <h1><i class="fas fa-hamburger"></i> Nuestro Menú</h1>
+            <p>Elige tu combinación perfecta. ¡Fresca, rápida y deliciosa!</p>
+        </div>
+    </header>
+
+    <main class="menu-container">
+        <!-- Filtros -->
+        <section class="filters">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-category="hamburguesa">
+                    <i class="fas fa-hamburger"></i> Hamburguesas
+                </button>
+                <button class="filter-btn" data-category="combo">
+                    <i class="fas fa-box"></i> Combos
+                </button>
+                <button class="filter-btn" data-category="bebida">
+                    <i class="fas fa-mug-hot"></i> Bebidas
+                </button>
+                <button class="filter-btn" data-category="postre">
+                    <i class="fas fa-ice-cream"></i> Postres
+                </button>
+                <button class="filter-btn" data-category="vegano">
+                    <i class="fas fa-leaf"></i> Vegano
+                </button>
+                <button class="filter-btn active" data-category="Broaster">
+                    <i class="fas fa-broaster"></i>Broaster
+                </button>
+            </div>
+        </section>
+
+        <!-- Grid de productos -->
+        <section class="menu-grid" id="menuGrid">
+            <!-- Productos se cargan dinámicamente con JS -->
+        </section>
+
+        <!-- Carrito flotante -->
+        <div class="cart-floating" id="cartFloating">
+            <button class="cart-toggle" id="cartToggle">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <div class="cart-panel" id="cartPanel">
+                <div class="cart-header">
+                    <h3>Tu Pedido</h3>
+                    <button class="close-cart" id="closeCart">&times;</button>
+                </div>
+                <div class="cart-items" id="cartItems"></div>
+                <div class="cart-total">
+                    <span>Total: S/ <span id="cartTotal">0.00</span></span>
+                </div>
+                <a href="https://wa.me/51936960659?text=Mi%20pedido:%20..." class="btn-whatsapp checkout">
+                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="menu.js"></script>
+</body>
+</html>
